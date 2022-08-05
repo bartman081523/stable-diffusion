@@ -119,8 +119,8 @@ if __name__ == "__main__":
     state = init()
 
     if not "model" in state:
-        config = "/fsx/stable-diffusion/stable-diffusion/configs/stable-diffusion/inpainting/v1-finetune-for-inpainting-laion-iaesthe.yaml"
-        ckpt = "/fsx/robin/stable-diffusion/stable-diffusion/logs/2022-07-24T16-01-27_v1-finetune-for-inpainting-laion-iaesthe/checkpoints/last.ckpt"
+        config = "../../models/ldm/inpainting_big/config.yaml"
+        ckpt = "../../models/ldm/inpainting_big/model.zip"
         config = OmegaConf.load(config)
         model = load_model_from_config(config, ckpt)
         state["model"] = model
